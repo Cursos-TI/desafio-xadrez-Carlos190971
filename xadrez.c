@@ -9,6 +9,8 @@ int main() {
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
     int jogador, bispo = 0, torre, rainha = 0, casas;     
     int paracima, parabaixo, direita, esquerda;
+    int i = 2;
+    int j = 1;
 
     
     /*
@@ -38,15 +40,17 @@ int main() {
     printf("1 - torre\n");
     printf("2 - Bispo\n");
     printf("3 - Rainha\n");
+    printf("4 - Cavalo\n");
     printf("Escolha: ");
     scanf("%d", &jogador);  
-    if (jogador < 1 || jogador > 3)
+    if (jogador < 1 || jogador > 5)
     {
        printf("Erro na escolha!\n");
 
        return 2;
     }
-      
+      printf("\n");
+
     switch (jogador)
     {
 
@@ -55,7 +59,7 @@ int main() {
     case 1:
         printf("Você escolheu a torre\n");
         printf("Escolha a direção\n");
-        printf("1 - Para cima\n");
+        printf("1 - Para direita\n");
         printf("Escolha: ");
         scanf("%d", &jogador);
 
@@ -66,18 +70,10 @@ int main() {
         return 3;
         }
         
-        printf("Mover quantas casas?\n");
-        printf("1 \n");
-        printf("2 \n");
-        printf("3 \n");
-        printf("4 \n");
-        printf("5 \n");
-        printf("6 \n");
-        printf("7 \n");
-        printf("8 \n");
+        printf("Mover quantas casas?\n");       
         scanf("%d", &casas);
 
-        if (casas <1 || casas > 8)
+        if (casas <1 || casas > 5)
             { 
                 printf("Escolha errada.\n");
             return 4;
@@ -96,9 +92,10 @@ int main() {
         printf("Você escolheu o Bispo\n");
         printf("Escolha a direção\n");
         printf("1 - Para cima(Direita).\n");
+        printf("Escolha: ");
         scanf("%d", &jogador);
 
-        if (jogador < 1 || jogador > 8)    
+        if (jogador < 1 || jogador > 5)    
         {
             printf("Escolha errada!");
 
@@ -127,6 +124,7 @@ int main() {
         printf("Você escolheu a Rainha\n");
         printf("Escolha a direção\n");
         printf("1 - Esquerda\n");
+        printf("Escolha: ");
         scanf("%d", &jogador);
              
         printf("Mover quantas casas?\n");
@@ -145,9 +143,7 @@ int main() {
         break;
        
     
-    default:
-        break;
-    }
+    
 
    
    
@@ -155,6 +151,34 @@ int main() {
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+
+    case 4:
+        printf("Você escolheu o cavalo\n");
+        printf("Escolha a direção\n");
+        printf("1 - 2 para cima e 1 para direita\n");
+        printf("Escolha: ");
+        scanf("%d", &jogador);
+             
+       for (int i = 0; i < 2; i++ ) {
+            for (int j = 1; j < 1; j++)
+            {
+                printf("Cima\n");
+            }
+
+          printf("cima\n");  
+            
+       }
+       
+       for (int i = 0; i < 1; i++ ) {
+           
+          printf("Direita\n");  
+            
+       }
+       printf("\n");
+
+    default:
+        break;
+    }
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
