@@ -155,7 +155,7 @@ int main() {
     case 4:
         printf("Você escolheu o cavalo\n");
         printf("Escolha a direção\n");
-        printf("1 - 2 para cima e 1 para direita\n");
+        printf("1 - 2 para cima e 1 para Esquerda\n");
         printf("Escolha: ");
         scanf("%d", &jogador);
              
@@ -171,7 +171,7 @@ int main() {
        
        for (int i = 0; i < 1; i++ ) {
            
-          printf("Direita\n");  
+          printf("Esquerda\n");  
             
        }
        printf("\n");
